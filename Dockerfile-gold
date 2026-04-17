@@ -1,4 +1,2 @@
 FROM nginx:1.29
-ADD /home/ubuntu/templatemo_611_maison_doree.zip Gold /app
-WORKDIR /app
-COPY app /usr/share/nginx/html/
+ADD /home/ubuntu/templatemo_611_maison_doree Gold /usr/share/nginx/html/
