@@ -1,3 +1,3 @@
 FROM nginx:1.29
-ADD templatemo_611_maison_doree.zip Gold
+ADD /home/ubuntu/templatemo_611_maison_doree.zip Gold
 COPY Gold /usr/share/nginx/html
