@@ -1,2 +1,2 @@
 FROM nginx:1.29
-ADD /home/ubuntu/templatemo_611_maison_doree Gold /usr/share/nginx/html/
+ADD templatemo_611_maison_doree /usr/share/nginx/html/
