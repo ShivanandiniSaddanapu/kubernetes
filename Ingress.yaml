@@ -1,5 +1,5 @@
 apiVersion: networking.k8s.io/v1
-kind: ingress
+kind: Ingress
 metadata:
   name: ingress-gold-std
   annotations:
@@ -7,23 +7,21 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/scheme: internet-facing
 spec:
-  ingressClassName: my-gold-std-ingress
+  ingressClassName: alb
   rules:
     - http:
         paths:
-
           - path: /gold
-            pathType: Prefix  
+            pathType: Prefix
             backend:
               service:
                 name: my-svc-gold
                 port:
                   number: 80
-
           - path: /std
             pathType: Prefix
             backend:
               service:
                 name: my-svc-std
                 port:
-                  number: 80        
+                  number: 80
