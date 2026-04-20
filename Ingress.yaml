@@ -2,6 +2,10 @@ apiVersion: networking.k8s.io/v1
 kind: ingress
 metadata:
   name: ingress-gold-std
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/scheme: internet-facing
 spec:
   ingressClassName: my-gold-std-ingress
   rules:
