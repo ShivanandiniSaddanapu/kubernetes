@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-svc-gold
+spec:
+  selector: 
+    app: gold
+  type: ClusterIP
+  ports:
+    - port: 80  

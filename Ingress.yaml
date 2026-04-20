@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: ingress
+metadata:
+  name: ingress-gold-std
+spec:
+  ingressClassName: my-gold-std-ingress
+  rules:
+    - http:
+        paths:
+
+          - path: /gold
+            pathType: Prefix  
+            backend:
+              service:
+                name: my-svc-gold
+                port:
+                  number: 80
+
+          - path: /std
+            pathType: Prefix
+            backend:
+              service:
+                name: my-svc-std
+                port:
+                  number: 80        
