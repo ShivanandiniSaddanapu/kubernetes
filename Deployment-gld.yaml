@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-gold-Deployment
+  name: my-gold-deployment
 spec:
   minReadySeconds: 6
   replicas: 4
@@ -14,13 +14,13 @@ spec:
       maxSurge: 25%
       maxUnavailable: 25%
   template:
-    metadata: my-pod-gold
-    labels:
-      app: gold
+    metadata:
+      labels:
+        app: gold
     spec:
       containers:
         - name: my-container-gold
-          image: "239500134360.dkr.ecr.ap-south-1.amazonaws.com/k8s/ingress:gld"
+          image: 239500134360.dkr.ecr.ap-south-1.amazonaws.com/k8s/ingress:gld
           imagePullPolicy: Always
           ports:
-            - containerPort: 80        
+            - containerPort: 80

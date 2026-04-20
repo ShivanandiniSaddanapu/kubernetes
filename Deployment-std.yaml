@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-std-Deployment
+  name: my-std-deployment
 spec:
   minReadySeconds: 6
   replicas: 4
@@ -14,13 +14,13 @@ spec:
       maxSurge: 25%
       maxUnavailable: 25%
   template:
-    metadata: my-pod-std
-    labels:
-      app: std
+    metadata:
+      labels:
+        app: std
     spec:
       containers:
         - name: my-container-std
-          image: "239500134360.dkr.ecr.ap-south-1.amazonaws.com/k8s/ingress:std"
+          image: 239500134360.dkr.ecr.ap-south-1.amazonaws.com/k8s/ingress:std
           imagePullPolicy: Always
           ports:
-            - containerPort: 80        
+            - containerPort: 80
